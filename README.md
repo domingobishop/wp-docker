@@ -6,4 +6,4 @@ Make build.sh executable:
 
 Run build:
 
-`./docker.sh`
+`./build.sh`
