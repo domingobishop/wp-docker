@@ -5,7 +5,7 @@ services:
     ports:
       - "8081:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
   wp:
     image: wordpress
     volumes:
@@ -15,7 +15,7 @@ services:
     links:
       - db:mysql
     environment:
-      WORDPRESS_DB_PASSWORD: ${PASSWORD}
+      WORDPRESS_DB_PASSWORD: ${DB_PASS}
   wp-cli:
     depends_on:
       - db
