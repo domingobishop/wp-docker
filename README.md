@@ -6,4 +6,4 @@ Make build.sh executable:
 
 Run build:
 
-`./build.sh`
+`./build.sh [URL] "[SITE NAME]" [ADMIN USER] [ADIM PASSOWRD] [ADMIN EMAIL]`
