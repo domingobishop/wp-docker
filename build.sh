@@ -1,11 +1,16 @@
 #!/bin/bash
 
-PASSWORD=password docker-compose up -d
+docker-compose up -d
 
+WP_URL=$1
+WP_TITLE=$2
+WP_ADMIN_USER=$3
+WP_ADMIN_PASS=$4
+WP_ADMIN_EMAIL=$5
 wp="docker-compose run --rm wp-cli"
 
 # Install and configure Wordpress
-$wp core install --url="localhost:8080" --title="WordPress" --admin_user="admin" --admin_password="admin" --admin_email="email@nationalarchives.gov.uk"
+$wp core install --url="${WP_URL}" --title="${WP_TITLE}" --admin_user="${WP_ADMIN_USER}" --admin_password="${WP_ADMIN_PASS}" --admin_email="${WP_ADMIN_EMAIL}"
 $wp config set WP_DEBUG true
 $wp rewrite structure '/%postname%/'
 
