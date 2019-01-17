@@ -2,7 +2,7 @@
 
 ### Enviroment variables
 
-Create an “.env” file in the same directory as the docker-composer file. (Do not commit this file to Github)
+Create an “.env” file in the same directory as the docker-compose file. (Do not commit this file to Github)
 
 Add the enviroment variables to this file:
 
