@@ -18,6 +18,7 @@ $wp core install --url="${WP_URL}" --title="${WP_TITLE}" --admin_user="${WP_ADMI
 tput setaf 6; echo "Configuring Wordpress..."; tput sgr0
 $wp config set WP_DEBUG true
 $wp rewrite structure '/%postname%/'
+$wp widget reset --all
 
 # Install plugins
 tput setaf 6; echo "Installing plugins..."; tput sgr0
